@@ -1,0 +1,72 @@
+﻿@model Project.Model.EF.SAN_PHAM
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header">
+                                    <h3 class="text-center font-weight-light my-4">Edit</h3>
+                                </div>
+                                <div class="card-body">
+                                    @using (Html.BeginForm("Edit", "Product", FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        @Html.HiddenFor(model => model.MASP)
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.TEN_SP, null, new { @class = "small mb-1" })
+                                            @Html.TextBoxFor(model => model.TEN_SP, null, new { @class = "form-control py-4", @type = "text", @placeholder = "Tên sản phẩm" })
+                                            @Html.ValidationMessageFor(model => model.TEN_SP, "", new { @class = "badge badge-danger" })
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.DVT, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.DVT, null, new { @class = "form-control py-4", @type = "text", @placeholder = "đơn vị tính" })
+                                                    @Html.ValidationMessageFor(model => model.DVT, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.DON_GIA, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.DON_GIA, null, new { @class = "form-control py-4", @type = "text", @placeholder = "Giá tiền" })
+                                                    @Html.ValidationMessageFor(model => model.DON_GIA, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.MO_TA, null, new { @class = "small mb-1" })
+                                            @Html.TextBoxFor(model => model.MO_TA, null, new { @class = "form-control py-4", @type = "text", @placeholder = "Mô tả sản phẩm" })
+                                        </div>
+                                        <div class="card-footer text-right">
+                                            <div class="small">
+                                                <input type="submit" value="Lưu" class="btn btn-primary" />
+                                                @Html.ActionLink("Hủy", "Index", null, new { @class = "btn btn-danger" })
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+
+
+

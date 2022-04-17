@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Project.Model.ViewModel.ViewOrderModel>
+
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h4>Danh sách đơn hàng</h4>
+<hr/>
+<div class="container-fluid">
+    <div class="form-row">
+        <div class="col-sm-8" style="padding-bottom:10px">
+            <a class="btn btn-primary" href="/Order/Create"><i class="fa fa-plus" aria-hidden="true"></i>Thêm mới</a>
+            <button id="btnReload" class="btn btn-success"><i class="fas fa-sync-alt"></i> Reload</button>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+</div>
+
+<div class="box-body no-padding margin-top-10">
+    <div id="divResult">
+        @{ Html.RenderPartial("_Index");}
+    </div>
+</div>
+
+

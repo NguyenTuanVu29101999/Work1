@@ -1,0 +1,81 @@
+E:\DoAnChuyenNghanh\Project\Project.Model\bin\Debug\Project.Model.dll.config
+E:\DoAnChuyenNghanh\Project\Project.Model\bin\Debug\Project.Model.dll
+E:\DoAnChuyenNghanh\Project\Project.Model\bin\Debug\Project.Model.pdb
+E:\DoAnChuyenNghanh\Project\Project.Model\bin\Debug\EntityFramework.dll
+E:\DoAnChuyenNghanh\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\DoAnChuyenNghanh\Project\Project.Model\bin\Debug\EntityFramework.xml
+E:\DoAnChuyenNghanh\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\DoAnChuyenNghanh\Project\Project.Model\obj\Debug\Project.Model.csprojAssemblyReference.cache
+E:\DoAnChuyenNghanh\Project\Project.Model\obj\Debug\Project.Model.csproj.CoreCompileInputs.cache
+E:\DoAnChuyenNghanh\Project\Project.Model\obj\Debug\Project.Model.csproj.CopyComplete
+E:\DoAnChuyenNghanh\Project\Project.Model\obj\Debug\Project.Model.dll
+E:\DoAnChuyenNghanh\Project\Project.Model\obj\Debug\Project.Model.pdb
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.dll.config
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.dll
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.pdb
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.dll
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.xml
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Test\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.csproj.CoreCompileInputs.cache
+E:\Test\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.csproj.CopyComplete
+E:\Test\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.dll
+E:\Test\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.pdb
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.dll
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.Mvc.dll
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.xml
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.Mvc.xml
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.dll.config
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.dll
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.pdb
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.dll
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.dll
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.Mvc.dll
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.xml
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.xml
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.Mvc.xml
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.csprojAssemblyReference.cache
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.csproj.CoreCompileInputs.cache
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.csproj.CopyComplete
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.dll
+D:\Work\others\giat ui\software\Vu\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.pdb
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\Common.dll
+E:\Test\giatsayzasa2021\Project\Project.Model\bin\Debug\Common.pdb
+E:\Test\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.csproj.AssemblyReference.cache
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.dll.config
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.dll
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\Project.Model.pdb
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\Common.dll
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.dll
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.dll
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.Mvc.dll
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\Common.pdb
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.xml
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.xml
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\bin\Debug\PagedList.Mvc.xml
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.csproj.AssemblyReference.cache
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.csproj.CoreCompileInputs.cache
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.dll
+D:\Data\ZASA\giatsayzasa2021\Project\Project.Model\obj\Debug\Project.Model.pdb
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\Project.Model.dll.config
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\Project.Model.dll
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\Project.Model.pdb
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\Common.dll
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\EntityFramework.dll
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\PagedList.dll
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\PagedList.Mvc.dll
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\Common.pdb
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\EntityFramework.xml
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\PagedList.xml
+D:\Data\DoAn\Work1\Project\Project.Model\bin\Debug\PagedList.Mvc.xml
+D:\Data\DoAn\Work1\Project\Project.Model\obj\Debug\Project.Model.csproj.AssemblyReference.cache
+D:\Data\DoAn\Work1\Project\Project.Model\obj\Debug\Project.Model.csproj.CoreCompileInputs.cache
+D:\Data\DoAn\Work1\Project\Project.Model\obj\Debug\Project.Model.csproj.CopyComplete
+D:\Data\DoAn\Work1\Project\Project.Model\obj\Debug\Project.Model.dll
+D:\Data\DoAn\Work1\Project\Project.Model\obj\Debug\Project.Model.pdb

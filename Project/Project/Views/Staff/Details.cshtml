@@ -1,0 +1,67 @@
+﻿@model Project.Model.EF.NHAN_VIEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NHAN_VIEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HO_TEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HO_TEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAY_SINH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAY_SINH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LUONG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LUONG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAY_TAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAY_TAO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MANV }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

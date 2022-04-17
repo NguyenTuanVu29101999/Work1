@@ -1,0 +1,95 @@
+﻿@model Project.Model.EF.KHACH_HANG
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header">
+                                    <h3 class="text-center font-weight-light my-4">Edit</h3>
+                                </div>
+                                <div class="card-body">
+                                    @using (Html.BeginForm("Edit", "Customer", FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        @Html.HiddenFor(model => model.MAKH)
+
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.TENKH, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.TENKH, null, new { @class = "form-control py-4", @type = "text", @placeholder = "Họ tên" })
+                                                    @Html.ValidationMessageFor(model => model.TENKH, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.NICK_NAME, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.NICK_NAME, null, new { @class = "form-control py-4", @type = "text", @placeholder = "Nik name" })
+                                                    @Html.ValidationMessageFor(model => model.NICK_NAME, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.GT, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.GT, null, new { @class = "form-control py-4", @type = "text", @placeholder = "Giới tính" })
+                                                    @Html.ValidationMessageFor(model => model.GT, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.NGAY_SINH, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.NGAY_SINH, null, new { @class = "form-control py-4", @type = "text" })
+                                                    @Html.ValidationMessageFor(model => model.NGAY_SINH, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.DT_KH, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.DT_KH, null, new { @class = "form-control py-4", @type = "text", @placeholder = "Điện thoại" })
+                                                    @Html.ValidationMessageFor(model => model.DT_KH, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.GHI_CHU, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.GHI_CHU, null, new { @class = "form-control py-4", @type = "text", @placeholder = "Ghi chú" })
+                                                    @Html.ValidationMessageFor(model => model.GHI_CHU, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer text-right">
+                                            <div class="small">
+                                                <input type="submit" value="Save" class="btn btn-primary" />
+                                                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-danger" })
+                                            </div>
+
+                                        </div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+
+
+

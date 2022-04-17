@@ -1,0 +1,232 @@
+﻿@model Project.Model.ViewModel.ViewOrderModel
+@{
+    ViewBag.Title = "Create";
+
+}
+<style type="text/css">
+    body {
+        font-family: Arial;
+        font-size: 15px;
+    }
+
+    .ui-autocomplete-input {
+        overflow: auto;
+        max-height: 100px;
+
+    }
+</style>
+<body>
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-body" style="font-family:Arial; color: black">
+                                    @using (Html.BeginForm("Create", "Order", FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <h4>Thêm Đơn Hàng</h4>
+                                        <hr />
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                        <div class="form-group">
+                                            <label class="small mb-1" for="SO_LUONG">Số lượng</label>
+                                            <input type="text" value="5" name="SO_LUONG"/>
+                                            @Html.LabelFor(model => Model.TENKH, new { @class = "small mb-1" })
+                                            @Html.TextBoxFor(model => Model.NICK_NAME, new { @class = "form-control" })
+                                            @Html.TextBoxFor(model => model.MAKH, null, new { @class = "form-control", @type = "hidden" })
+
+                                            @*@Html.LabelFor(model => model.TENKH, null, new { @class = "small mb-1" })
+                @Html.DropDownListFor(model => model.MAKH, null, new { @class = " form-control", @type = "button", @style = "color: black", @required = "required" })*@
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.TEN_SP, null, new { @class = "small mb-1" })
+                                                    @Html.DropDownList("MASP", ViewBag.Name as SelectList, "Chọn sản phẩm", htmlAttributes: new { @id = "MASP", @class = "form-control", @style = "color: black;width:100%" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="small mb-1" for="SO_LUONG">Số lượng</label>
+                                                    <input class="form-control py-2" data-val="true" id="SO_LUONG" name="SO_LUONG"
+                                                           type="number" value="1" style="color:black;text-align:center" min="1" step="1" max="100" required />
+                                                    <span class="field-validation-valid badge badge-danger" data-valmsg-for="SO_LUONG" data-valmsg-replace="true"></span>
+
+                                                    @*@Html.LabelFor(model => model.SO_LUONG, null, new { @class = "small mb-1" })
+                        @Html.TextBoxFor(model => model.SO_LUONG, null, new { @class = "form-control py-2", @type = "number", @id = "txtSoLuong" })
+                        @Html.ValidationMessageFor(model => model.SO_LUONG, "", new { @class = "badge badge-danger" })*@
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="small mb-1" for="DON_GIA">Đơn giá</label>
+                                                    <input class="form-control py-2" type="text" id="Name" name="DON_GIA" readonly="readonly"
+                                                           value="0" style="color:red;font-weight:bold;text-align:right" />
+
+                                                    @*@Html.LabelFor(model => model.DON_GIA, null, new { @class = "small mb-1" })
+                        @Html.TextBoxFor(model => model.DON_GIA, null, new { @type = "text", @id = "Name", @class = "form-control py-2", @readonly = "readonly", @style = "color: red; font-weight: bold" })*@
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="small mb-1" for="DVT"></label>
+                                                    <input class="form-control py-2" type="text" id="DonViTinh" name="DVT"
+                                                           readonly="readonly" style="color:red;font-weight:bold;text-align:right" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.NGAY_LAY_DO, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.NGAY_LAY_DO, null, new { @class = "form-control py-2", @type = "Datetime-local", @id = "dtpNgayLayDo", @style = "color: black", @required = "required" })
+                                                    @Html.ValidationMessageFor(model => model.NGAY_LAY_DO, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.NGAY_HEN_KHACH, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.NGAY_HEN_KHACH, null, new { @class = "form-control py-2 ", @type = "datetime-local", @id = "dtpNgayHen", @style = "color: black", @required = "required" })
+                                                    @Html.ValidationMessageFor(model => model.NGAY_HEN_KHACH, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="small mb-1" for="DT_GH">Điện thoại GH</label>
+                                            <input class="form-control py-2" data-val="true" id="DT_GH" name="DT_GH" type="text" value="0333019603" readonly="readonly" style="color:black" />
+                                            <span class="field-validation-valid badge badge-danger" data-valmsg-for="DT_GH" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-12">
+                                                <div class=" form-group">
+                                                    @Html.LabelFor(model => model.TRANG_THAI, null, new { @class = "small mb-1", @style = "font-size:17px" })
+                                                    <div class="col-md-6">
+                                                        @Html.RadioButtonFor(m => m.TRANG_THAI, "mới nhận", new { @class = "rbtn" })
+                                                        Mới nhận
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        @Html.RadioButtonFor(m => m.TRANG_THAI, "đang giặt", new { @class = "rbtn" })
+                                                        Đang giặt
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        @Html.RadioButtonFor(m => m.TRANG_THAI, "giặt xong", new { @class = "rbtn" })
+                                                        Giặt xong
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        @Html.RadioButtonFor(m => m.TRANG_THAI, "đã giao", new { @class = "rbtn" })
+                                                        Đã giao
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.NOTE, null, new { @class = "small mb-1" })
+                                            @Html.TextBoxFor(model => model.NOTE, null, new { @class = "form-control py-2", @type = "text", @placeholder = "Ghi chú", @style = "color: black" })
+                                            @Html.ValidationMessageFor(model => model.NOTE, "", new { @class = "badge badge-danger" })
+                                        </div>
+                                        @*<div class="form-group">
+                @Html.LabelFor(model => model.THANH_TIEN, null, new { @class = "small mb-1" })
+                @Html.TextBoxFor(model => model.THANH_TIEN, null, new { @class = "form-control py-4", @type = "text"})
+                @Html.ValidationMessageFor(model => model.THANH_TIEN, "", new { @class = "badge badge-danger" })
+            </div>*@
+
+                                        <div class="form-group row">
+                                            <div class=" form-check ">
+                                                <label class="form-check-label">
+                                                    @Html.CheckBoxFor(model => model.SHIP) Giao Hàng
+                                                    @*<input class="form-check-input" type="checkbox" name="remember"> Trạng thái*@
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer text-right">
+                                            <div class="small">
+                                                <input type="submit" value="Lưu" class="btn btn-primary" />
+                                                @Html.ActionLink("Hủy", "Index", "Order", null, new { @class = "btn btn-danger" })
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/jquery-ui.min.js" type="text/javascript"></script>
+<link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/themes/blitzer/jquery-ui.css"
+      rel="Stylesheet" type="text/css" />
+<script type="text/javascript">
+    $("#NICK_NAME").autocomplete({
+        source: function (request, response) {
+            $.ajax({
+                url: '@Url.Action("AutoComplete","Order")',
+                data: "{ 'prefix': '" + request.term + "'}",
+                dataType: "json",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    response($.map(data, function (item) {
+                        return item;
+                    }))
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+            });
+        },
+        select: function (e, i) {
+            $("#MAKH").val(i.item.val);
+        },
+        minLength: 0
+    })
+
+    $("#MASP").change(function () {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("Name")',
+                data: { id: $("#MASP").val() },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    $('#Name').val(response);
+                },
+                failure: function (msg) {
+                    $('#Name').text(msg);
+                },
+            });
+    });
+
+     $("#MASP").change(function () {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("DonViTinh")',
+                data: { id: $("#MASP").val() },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    $('#DonViTinh').val(response);
+
+                },
+                failure: function (msg) {
+                    $('#DonViTinh').text(msg);
+                },
+            });
+    });
+</script>
+
+
+
+

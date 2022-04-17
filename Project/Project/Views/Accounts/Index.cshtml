@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Project.Model.EF.ACCOUNT>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Danh sách tài khoản</h4>
+<hr />
+
+<div class="container-fluid">
+    <div class="form-row">
+        <div class="col-md-10 ">
+            <a href="/Accounts/Create" class="btn btn-primary"> <i class="fa fa-plus" aria-hidden="true"></i> Thêm mới</a>
+            <a href="/Accounts/Index" class="btn btn-info"> <i class="fas fa-sync-alt"></i> Reload</a>
+        </div>
+    </div>
+</div>
+
+<div class="box-body no-padding margin-top-10">
+    <div id="divResult">
+        @{ Html.RenderPartial("_Index");}
+    </div>
+</div>

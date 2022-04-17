@@ -1,0 +1,94 @@
+﻿@model Project.Model.EF.ACCOUNT
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header">
+                                    <h3 class="text-center font-weight-light my-4">Edit</h3>
+                                </div>
+                                <div class="card-body">
+                                    @using (Html.BeginForm("Edit", "Accounts", FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        @Html.HiddenFor(model => model.ID)
+
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.TAI_KHOAN, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.TAI_KHOAN, null, new { @class = "form-control", @placeholder = "Username", @aotufocus = "autofocus" })
+                                                    @Html.ValidationMessageFor(model => model.TAI_KHOAN, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.MAT_KHAU, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.MAT_KHAU, null, new { @class = "form-control", @type = "password", @placeholder = "Password" })
+                                                    @Html.ValidationMessageFor(model => model.MAT_KHAU, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.ID_GROUP, null, new { @class = "small mb-1" })
+                                                    @Html.DropDownListFor(model => model.ID_GROUP, null, new { @class = " form-control ", @type = "button" })
+                                                    @Html.ValidationMessageFor(model => model.ID_GROUP, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.OWNERS, null, new { @class = "small mb-1" })
+                                                    @Html.TextBoxFor(model => model.OWNERS, null, new { @class = "form-control", @type = "text", @placeholder = "Người sở hữu" })
+                                                    @Html.ValidationMessageFor(model => model.OWNERS, "", new { @class = "badge badge-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <div class="form-group form-check">
+                                                <label class="form-check-label">
+                                                    @Html.CheckBoxFor(model => model.TRANG_THAI) Trạng thái
+                                                    @*<input class="form-check-input" type="checkbox" name="remember"> Trạng thái*@
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer text-right">
+                                            <div class="small">
+                                                <input type="submit" value="Save" class="btn btn-primary" />
+                                                @Html.ActionLink("Cancel", "Index", "Accounts", null, new { @class = "btn btn-danger" })
+                                                @*<a href="login.html">Have an account? Go to login</a>*@
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

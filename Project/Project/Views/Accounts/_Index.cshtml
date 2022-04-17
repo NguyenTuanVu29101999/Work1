@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Project.Model.EF.ACCOUNT>
+@{
+    Layout = null;
+}
+<link href="~/Dist/Style/StyleS.css" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" >
+            <thead class="thead-dark">
+                <tr style="text-align:center" class="col-md-3">
+                    <th>STT</th>
+                    <th>Tài khoản</th>
+                    <th>Mật khẩu</th>
+                    <th>Phân quyền</th>
+                    <th>Sở hữu</th>
+                    <th>Trạng thái</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+            @if (Model != null && Model.Any())
+            {
+                var i = 1;
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="row_@item.ID" class="col-md-3" style="text-align:center">
+                            <td>@i</td>
+                            <td>@item.TAI_KHOAN</td>
+                            <td>@item.MAT_KHAU</td>
+                            <td>@item.ID_GROUP</td>
+                            <td>@item.OWNERS</td>
+                            <td>
+                                <a href="#" class="btn-active" data-id="@item.ID">@(item.TRANG_THAI ? "Kích hoạt" : "Khóa")</a>
+                            </td>
+                            <td>
+                                <a href="/Accounts/Edit/@item.ID" class="btn btn-success" style="height:35px"><i class="fas fa-pen"></i></a>
+                                <a href="/Accounts/Delete/@item.ID" class="btn btn-danger" style="height:33px"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            }
+            else
+            {
+                <tbody>
+                    <tr>
+                        <td colspan="7">Không có bản ghi nào</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+</div>

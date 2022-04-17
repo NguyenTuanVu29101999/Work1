@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Project.Model.EF.KHUYEN_MAI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Chương trình khuyến mãi</h4>
+<hr/>
+<div class="container-fluid">
+    <div class="form-row">
+        <div class="col-sm-8">
+            <button id="btnAddNewPro" class="btn btn-primary"> <i class="fa fa-plus" aria-hidden="true"></i> Thêm mới</button>
+            <button id="btnReloadPro" class="btn btn-info"><i class="fas fa-sync-alt"></i> Reload</button>
+            @*@Html.ActionLink("Thêm mới", "Create", "Order", null, new { @class = "btn btn-primary" })*@
+        </div>
+        <div class="col-sm-4">
+            @using (Html.BeginForm("Index", "Promotion", FormMethod.Get))
+            {
+                <div class="form-group">
+                    <div class="input-group">
+                        @*<input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />*@
+                        <input type="text" name="searchString" class="form-control"
+                               placeholder="Search for ...." aria-label="Search" aria-describedby="basic-addon2" style="border:solid 1px" />
+                        <div class="input-group-prepend">
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="box-body no-padding margin-top-10">
+    <div id="divResult">
+        @{ Html.RenderPartial("_Index");}
+    </div>
+</div>

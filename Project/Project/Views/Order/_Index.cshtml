@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Project.Model.ViewModel.ViewOrderModel>
+@{
+    Layout = null;
+}
+
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size:15px;font-family:Arial">
+            <thead class="thead-dark">
+                <tr style="text-align:center">
+                    <th>STT</th>
+                    <th>Khách hàng</th>
+                    <th>Sản phẩm</th>
+                    <th>Thành tiền</th>
+                    <th>Ngày tạo</th>
+                    <th>Trạng thái</th>
+                    <th style="width:137px">Thao tác</th>
+                </tr>
+            </thead>
+            @if (Model != null && Model.Any())
+            {
+                var i = 1;
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="row_@item.IDDH" class="col-md-3" style="text-align:center">
+                            <td>@i</td>
+                            <td>@item.NICK_NAME</td>
+                            <td>@item.TEN_SP</td>
+                            <td>@String.Format("{0:0,0}", item.THANH_TIEN)</td>
+                            <td>@item.NGAY_TAO</td>
+                            <td style="color:blue">@item.TRANG_THAI</td>
+
+                            <td>
+                                <a href="/Order/Details/@item.IDDH" class="btn btn-primary" style="height:35px"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href="/Order/Delete/@item.IDDH" class="btn btn-danger" style="height:33px"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                              
+                            </td>
+                        </tr>
+                        i++;
+                    }
+
+                </tbody>
+            }
+            else
+            {
+                <tbody>
+                    <tr>
+                        <td colspan="7">Không có bản ghi nào</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+</div>
+

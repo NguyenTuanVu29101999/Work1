@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Project.Model.EF.SAN_PHAM>
+
+@{
+    Layout = null;
+}
+<div class="table-responsive">
+    <table class="table table-bordered" id="dataTable"cellspacing="0" style="font-size:15px">
+        <thead class="thead-dark" style="width:30%">
+            <tr style="text-align:center">
+                <th>Tên sản phẩm</th>
+                <th>Đơn vị</th>
+                <th>Giá</th>
+                <th>Mô tả</th>
+                <th>chức năng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="row_@item.MASP" class="col-md-3" style="text-align:center">
+                    <td>@item.TEN_SP</td>
+                    <td>@item.DVT</td>
+                    <td>@String.Format("{0:0,0}", item.DON_GIA)</td>
+                    <td>@item.MO_TA</td>
+                    <td>
+                        <a href="/Product/Edit/@item.MASP" class="btn btn-primary" style="height:35px"><i class="fas fa-pen" aria-hidden="true"></i></a>
+                        <a href="/Product/Delete/@item.MASP" class="btn btn-danger" style="height:35px"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+

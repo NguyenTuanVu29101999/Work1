@@ -1,0 +1,25 @@
+﻿* {
+    font-family:Arial;
+}
+.small a {
+    color:black;
+   font-family:Arial;
+   font-size:13px;
+
+}
+.small a:hover{
+    color:red;
+    text-decoration:none;
+}
+label{
+    font-size:15px;
+    font-family:Arial;
+}
+.feedback {
+    color : black;
+}
+/*.feedback:hover{
+    text-decoration:none;
+    color:red;
+}*/
+

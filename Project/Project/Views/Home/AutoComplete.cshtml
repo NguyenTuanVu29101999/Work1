@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "AutoComplete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Scripts/css/jquery-ui.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("NICK_NAME").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Home/GetAutoComplete",
+                    type: "POST",
+                    dataType: "json",
+                    data: { term: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.NICK_NAME
+                            }
+                        }))
+                    },
+                    messages: {
+                        noReslts: "", results:""
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+<h2>AutoComplete</h2>
+
+<input type="text" name="NICK_NAME" id="NICK_NAME" />
+
